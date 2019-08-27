@@ -14,7 +14,7 @@ let appData = {
 	budget: money,
 	expenses: {},
 	optionalExpenses: {},
-	income: ["абра", "кадабра", "парампапам", "кабла" ],
+	income: [],
 	timeData: time,
 	savings: true,
 	chooseExpenses: function () {
@@ -61,22 +61,18 @@ let appData = {
 
 		// Вывод результатов
 		console.log("Способы доп. заработка:")
-			appData.income.forEach(function(item, i , income){
+			appData.income.forEach(function(item, i , itemmassive){
 			console.log( (i + 1) +  ". " + item )
 			});
 		} else {
 			console.log("ошибка")
 		}
-	},showData: function() {
+	},
+	showData: function() {
 		console.log('Наша программа включает в себя данные: ')
 		for (let key in appData ) {
-			console.log(key)
+			console.log(key + " – " + appData[key])
 		}
 	},
 
-
 };
-
-
-
-
